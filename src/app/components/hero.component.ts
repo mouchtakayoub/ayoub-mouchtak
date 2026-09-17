@@ -78,28 +78,36 @@ import { STATS } from '../data/portfolio-data';
           </div>
         </div>
 
-        <!-- Right Visual Showcase / Teaser Cards -->
+        <!-- Right Visual Showcase / Profile Showcase -->
         <div class="hero-visual">
-          <div class="code-card glass-card">
-            <div class="code-header">
-              <div class="browser-dots">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
+          <div class="dev-showcase-card glass-card">
+            <div class="dev-photo-wrapper">
+              <img src="profile.jpg" alt="Ayoub Mouchtak" class="dev-main-photo" />
+              <div class="photo-status-badge">
+                <span class="pulse-dot"></span>
+                <span>Available for New Projects</span>
               </div>
-              <span class="code-title">AyoubMouchtak.ts</span>
             </div>
-            <div class="code-body">
-              <pre><code><span class="kw">const</span> developer = &#123;
-  <span class="prop">name</span>: <span class="str">'Ayoub Mouchtak'</span>,
-  <span class="prop">role</span>: <span class="str">'Full-Stack Web Architect'</span>,
-  <span class="prop">location</span>: <span class="str">'Casablanca, Morocco (Remote)'</span>,
-  <span class="prop">frontend</span>: [<span class="str">'Angular 18'</span>, <span class="str">'TypeScript'</span>, <span class="str">'Tailwind'</span>],
-  <span class="prop">backend</span>: [<span class="str">'Spring Boot'</span>, <span class="str">'.NET Framework'</span>, <span class="str">'C#'</span>],
-  <span class="prop">databases</span>: [<span class="str">'MySQL'</span>, <span class="str">'PostgreSQL'</span>, <span class="str">'SQL Server'</span>],
-  <span class="prop">integrations</span>: [<span class="str">'Stripe'</span>, <span class="str">'PayPal'</span>, <span class="str">'REST APIs'</span>],
-  <span class="prop">availableForHire</span>: <span class="bool">true</span>
-&#125;;</code></pre>
+
+            <div class="dev-card-info">
+              <div class="dev-header-row">
+                <div>
+                  <h3 class="dev-name">Ayoub Mouchtak</h3>
+                  <p class="dev-role">Full-Stack Web Architect</p>
+                </div>
+                <a href="https://www.linkedin.com/in/ayoub-mouchtak/" target="_blank" rel="noopener" class="dev-linkedin-btn" title="LinkedIn Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.91 0-1.64.73-1.64 1.64s.73 1.64 1.64 1.64 1.64-.73 1.64-1.64-.73-1.64-1.64-1.64Z"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="dev-skills-row">
+                <span class="dev-pill">Frontend</span>
+                <span class="dev-pill">Backend</span>
+                <span class="dev-pill">Microservices</span>
+                <span class="dev-pill">APIs</span>
+              </div>
             </div>
           </div>
 
@@ -211,42 +219,119 @@ import { STATS } from '../data/portfolio-data';
       justify-content: center;
     }
 
-    .code-card {
+    .dev-showcase-card {
       width: 100%;
-      max-width: 440px;
-      border-radius: 18px;
+      max-width: 400px;
+      border-radius: 22px;
       overflow: hidden;
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.2);
+      display: flex;
+      flex-direction: column;
     }
 
-    .code-header {
-      background: #0b0f19;
-      padding: 12px 18px;
+    .dev-photo-wrapper {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .dev-main-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .dev-showcase-card:hover .dev-main-photo {
+      transform: scale(1.03);
+    }
+
+    .photo-status-badge {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #34d399;
+    }
+
+    .dev-card-info {
+      padding: 18px 22px;
+      background: #0f172a;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .dev-header-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .code-title {
-      font-size: 0.75rem;
+    .dev-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .dev-role {
+      font-size: 0.82rem;
+      color: #38bdf8;
+      margin-top: 2px;
+    }
+
+    .dev-linkedin-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .dev-linkedin-link:hover {
+      background: rgba(14, 165, 233, 0.25);
+      color: #7dd3fc;
+      transform: scale(1.08);
+    }
+
+    .dev-skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .dev-pill {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       color: #94a3b8;
+      font-size: 0.72rem;
+      padding: 2px 10px;
+      border-radius: 6px;
       font-family: monospace;
     }
-
-    .code-body {
-      padding: 20px 22px;
-      font-size: 0.85rem;
-      font-family: 'JetBrains Mono', Consolas, monospace;
-      line-height: 1.65;
-    }
-
-    .kw { color: #f43f5e; font-weight: 600; }
-    .prop { color: #38bdf8; }
-    .str { color: #a3e635; }
-    .bool { color: #fbbf24; }
 
     /* Floating badges */
     .floating-pill-1 {

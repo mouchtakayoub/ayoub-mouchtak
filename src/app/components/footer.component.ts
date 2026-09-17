@@ -55,8 +55,13 @@ import { CommonModule } from '@angular/common';
         <!-- Footer Bottom Bar -->
         <div class="footer-bottom">
           <div class="footer-brand-side">
-            <span class="footer-brand-title">Ayoub Mouchtak</span>
-            <span class="footer-brand-sub">Full-Stack Engineer • Angular & Enterprise APIs</span>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <img src="profile.jpg" alt="Ayoub Mouchtak" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid rgba(59, 130, 246, 0.5);" />
+              <div>
+                <span class="footer-brand-title">Ayoub Mouchtak</span>
+                <span class="footer-brand-sub" style="display: block;">Full-Stack Engineer • Web Architect</span>
+              </div>
+            </div>
           </div>
 
           <div class="footer-nav">

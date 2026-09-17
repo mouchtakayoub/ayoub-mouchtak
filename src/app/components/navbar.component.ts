@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
     <header class="navbar-wrapper">
       <div class="container nav-container">
         <a href="#" class="nav-brand">
-          <div class="brand-avatar">AM</div>
+          <img src="profile.jpg" alt="Ayoub Mouchtak" class="brand-avatar-img" />
           <div class="brand-info">
             <span class="brand-name">Ayoub Mouchtak</span>
             <span class="brand-role">Full-Stack Web Architect</span>
@@ -110,18 +110,14 @@ import { CommonModule } from '@angular/common';
       text-decoration: none;
     }
 
-    .brand-avatar {
-      width: 40px;
-      height: 40px;
+    .brand-avatar-img {
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #2563eb, #0ea5e9);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid rgba(59, 130, 246, 0.6);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
     }
 
     .brand-info {
