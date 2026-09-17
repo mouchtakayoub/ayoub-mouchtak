@@ -1,0 +1,46 @@
+<!-- Ambient Background Lighting Orbs -->
+<div class="bg-ambient">
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+</div>
+
+<!-- Sticky Modern Navbar -->
+<app-navbar (openContact)="openContact()"></app-navbar>
+
+<!-- Main Page Sections -->
+<main>
+  <!-- Hero / Introduction -->
+  <app-hero (openContact)="openContact()"></app-hero>
+
+  <!-- Flagship Projects (Showcasing EliteCare, PowerFit, Vanguard Law, L''Élixir) -->
+  <app-projects-section 
+    (selectProject)="openProject($event)"
+    (openContact)="openContact()">
+  </app-projects-section>
+
+  <!-- Technical Competencies & Architecture Stack -->
+  <app-skills></app-skills>
+
+  <!-- Freelance Services & Deliverables -->
+  <app-services (openContact)="openContact()"></app-services>
+
+  <!-- Track Record & Experience -->
+  <app-experience></app-experience>
+</main>
+
+<!-- High-Conversion Footer -->
+<app-footer (openContact)="openContact()"></app-footer>
+
+<!-- Deep-Dive Case Study Modal -->
+<app-case-study-modal 
+  [project]="selectedProject()" 
+  (close)="closeProject()"
+  (requestQuote)="openContact()">
+</app-case-study-modal>
+
+<!-- Quick Project Consultation / Quote Modal -->
+<app-contact-modal 
+  [isOpen]="isContactOpen()" 
+  (close)="closeContact()">
+</app-contact-modal>
