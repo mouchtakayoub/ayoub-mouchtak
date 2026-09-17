@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "node -e \"const fs=require('fs'); ['dist/ayoub-mouchtak', 'dist/portfolio-angular'].forEach(d => { if(!fs.existsSync(d)) fs.mkdirSync(d, {recursive:true}); fs.cpSync('dist/portfolio-angular/browser', d, {recursive:true}); });\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
